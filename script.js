@@ -217,14 +217,110 @@
 
 // }]
 
-let word = "hbbl"
-let number = 4
-let array = [1,2,3,4,5,6,'efg']
-let obj = {
-    city:'bhjkk',
-    population:4567
-}
+// let word = "hbbl"
+// let number = 4
+// let array = [1,2,3,4,5,6,'efg']
+// let obj = {
+//     city:'bhjkk',
+//     population:4567
+// }
 
+
+
+
+
+////////////////////////////////////////// მე -4 ლექცია
+
+
+// let age = prompt('დაწერეთ ასაკი');
+// console.log( typeof age);
+
+// let age = Number(prompt('დაწერეთ ასაკი'));
+// console.log(typeof age);
+
+// let  fullName= prompt('დაწერეთ სახელი');
+// let result = fullName.trim()
+// console.log( result);
+
+// let  fullName= prompt('დაწერეთ სახელი');
+// let result = fullName.toLowerCase()
+// console.log( result);
+
+// let  fullName= prompt('დაწერეთ სახელი');
+// let result = fullName.charAt(0).toUpperCase() + fullName.slice(1).toLowerCase()
+// console.log( result);
+
+
+// template literal
+// let text = prompt("დაწერეთ სახელი:");
+// let age = Number(prompt('დაწერეთ ასაკი'))
+// // console.log(age);
+// console.log(`ჩემი ასაკი: ${age}`);
+
+
+// objects-ობიექტი
+
+// სახელის დაბეჭვდა
+
+
+// პირველი დიდი ასობგერა რომ იყოს 
+// let text = prompt("დაწერეთ სახელი:");
+// let fullName = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+// console.log(`ჩემი სახელია: ${fullName}`);
+
+// let text = prompt("დაწერეთ სტრიქონი:");
+// console.log(`სტრიქონის სიგრძეა: ${text.length}`);
+// console.log(`დიდი ასოებით: ${text.toUpperCase()}`);
+// console.log(`პატარა ასოებით: ${text.toLowerCase()}`);
+
+// let school = {
+//     name: "Greenwood High School",
+//     location: "Tbilisi, Georgia",
+//     numberOfStudents: 500,
+//     hasSportsFacilities: true,
+//     subjects: ["Math", "Science", "History", "Geography", "Literature"],
+//     principal: {
+//       name: "Mr. John Smith",
+//       age: 45,
+//       contact: "john.smith@school.com"
+//     }
+//   };
+//  delete school.numberOfStudents 
+// console.log(school);
+
+
+
+
+
+// console.log(`${school.principal['name']} is director , he is ${school.principal['age']} , ჩემი საყვარელი საგანია ${school.subjects[0]} და ${school.subjects[1]}`);
+
+
+
+
+
+let notebook = {
+    name: "Laptop",
+    brand: "Dell",
+    model: "XPS 13",
+    price: 1200,
+    inStock: true,
+    specifications: {
+      processor: "Intel Core i7",
+      ram: "16GB",
+      storage: "512GB SSD",
+      screen: "13.3 inches, Full HD"
+    },
+    reviews: ["Excellent laptop!" ,"Good laptop"]
+   
+};
+// notebook.specifications.ram = '20 GB';
+notebook.specifications.ram = '20 GB';
+console.log(`კომპიუტერის რემი არის ${notebook.specifications.ram}`);
+
+
+
+
+  
 
 
  
