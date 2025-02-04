@@ -298,24 +298,135 @@
 
 
 
-let notebook = {
-    name: "Laptop",
-    brand: "Dell",
-    model: "XPS 13",
-    price: 1200,
-    inStock: true,
-    specifications: {
-      processor: "Intel Core i7",
-      ram: "16GB",
-      storage: "512GB SSD",
-      screen: "13.3 inches, Full HD"
-    },
-    reviews: ["Excellent laptop!" ,"Good laptop"]
+// let notebook = {
+//     name: "Laptop",
+//     brand: "Dell",
+//     model: "XPS 13",
+//     price: 1200,
+//     inStock: true,
+//     specifications: {
+//       processor: "Intel Core i7",
+//       ram: "16GB",
+//       storage: "512GB SSD",
+//       screen: "13.3 inches, Full HD"
+//     },
+//     reviews: ["Excellent laptop!" ,"Good laptop"]
    
-};
+// };
 // notebook.specifications.ram = '20 GB';
-notebook.specifications.ram = '20 GB';
-console.log(`კომპიუტერის რემი არის ${notebook.specifications.ram}`);
+// notebook.specifications.ram = '20 GB';
+// console.log(`კომპიუტერის რემი არის ${notebook.specifications.ram}`);
+
+
+
+
+
+// //////////////////////   მე-5 ლექცია (ჯავასკრიპტი)
+
+
+// •  შექმენი ობიექტი, რომელიც აღწერს თეატრის ბილეთს.
+// •	სტრიქონი (string): ბილეთის ნომერი, თეატრის სახელი, შოუ.
+// •	რიცხვი (number): ბილეთის ფასი.
+// •	ბულიანი (boolean): თუ ბილეთი ხელმისაწვდომია.
+// •	ობიექტი (object): თეატრის მისამართი.
+// •	თარიღი (Date): ბილეთის შეძენის თარიღი.
+// •  შეცვალეთ ბილეთის ფასი და ხელმისაწვდომობა (isAvailable).
+// •  დააბეჭდეთ კონსოლში თქვენი შექმნილი ობიექტი.
+//  let ticket = {
+//   nameOfTheatre:'Marjanishvili',
+//   numberOfTicket:23,
+//   inStock:true,
+//   dateOfTheatre:23,
+//   price:35
+
+//  }
+//  ticket.price = 20;
+//  ticket.inStock =false;
+//  delete ticket.inStock;
+// console.log(ticket.price);
+// console.log(ticket.inStock);
+
+
+// ციკლი -- loop
+
+// for(let i=0; i <=4; i++){
+//   console.log("hello");
+ 
+// }
+// for(let i=10; i >0; i--){
+//   console.log("bye");
+ 
+// }
+// while loop
+// let i=0;
+// while(i < 4){
+//   console.log('hello');
+//   i++
+  
+// }
+
+
+// for(let of item){
+//   console.log("hello");
+  
+// }
+// let array =[1,2,3,4,5];
+// for(let i=0; i < array.length; i++){
+//   console.log(array[i]);
+  
+// }
+
+// if/else
+// let x = 3;
+// if( x > 4){
+//   console.log("right");
+
+// }else if(x < 7){
+//   console.log('right1');
+  
+
+// }else{
+//   console.log('wrong');
+  
+// }
+
+// •	90-100: "A"
+// •	80-89: "B"
+// •	70-79: "C"
+// •	60-69: "D"
+// •	0-59: "F"
+// let score =300;
+// if(score >= 90 && score <= 100){
+//   console.log("A");
+  
+// }else if (score >= 80 && score <= 89){
+//   console.log("B");
+
+// }else if (score >= 70 && score <= 79){
+//   console.log("C");
+// }else if(score > 100){
+//   console.log("score is more than 100");
+  
+
+// }
+// else{
+//   console.log("fail");
+  
+// }
+
+// ლუწი კენტი
+
+let array = [2,4,6,8,34,23,45,66,88];
+for( let i=0; i < array.length; i++){
+  if(array[i] % 2 == 1){
+    console.log(array[i]);
+    
+  }
+
+  
+}
+
+
 
 
 
