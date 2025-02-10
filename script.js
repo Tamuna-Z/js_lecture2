@@ -501,7 +501,7 @@
 
 //  ახალი მასალა
 
-let age = 19;
+// let age = 19;
 // if( age > 18 ){
 //     console.log(" wine");
 // }else{
@@ -546,10 +546,116 @@ let age = 19;
 // calcDay(5)
 // calcDay(6)
 
+// მე-7 ლექცია
+//1. დაწერე ფუნქცია , რომელიც დააჯამებს მხოლოდ დადებით რიცხვებს
+// 2.დაწერეთ ფუნქცია რომელიც დააბრუნებს სახელს და გვარს ობიექტიდან
+// const person = {
+    //     firstName: "David",
+    //     lastName: "Johnson",
+    //     ciry:"Batumi"
+    //   };
+// 3 დაწერეთ ფუნქცია რომელიც დააბრუნებს მაქსიმალურ რიცხვს
+// 4ფუნქცია უნდა მიიღებდეს ორი პარამეტრი (start და end), რომლებიც არის რიცხვები.
+// ფუნქცია უნდა დააბრუნოს მასივი ყველა რიცხვისგან, რომლებიც შესული რიცხვების შორის იმყოფებიან (მათ შორის).
+// 5
+// დაწერეთ ფუნქცია, რომელიც მიიღებს რამდენიმე სახელს და მათ ყველას მიესალმება
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// .
 
 
+// 1.function sum(...numbers){
+//     let result=0
+//     for(let x of numbers){
+//         if(x > 0){
+//             result =result + x
+//         }
+//     }
+//     return result
+
+// }
+
+// console.log(sum(2,3,4,5-7,-5));
+// 2.
+// const person = {
+//     firstName: "David",
+//     lastName: "Johnson"
+//   };
+
+//   function getFullName(person) {
+//     return `${person.firstName} ${person.lastName}`;
+//   }
+  
+//   // ფუნქციის გამოძახება
+//   console.log(getFullName(person)); 
+
+// 3
+// function findMax(...numbers) {
+//     let max = 0; // დაწყება პირველი რიცხვით
+
+//     for (let i = 0; i < numbers.length; i++) {
+//         if (numbers[i] > max) {
+//             max = numbers[i];
+//         }
+//     }
+
+//     return max;
+// }
+// console.log(findMax(3,5,6,7,888,99,89));
+
+// 
 
 
+// const squaredNumbers = numbers.map(num => num * num);
+// console.log(squaredNumbers); // ✅ [1, 4, 9, 16, 25]
+
+// const numbers = [10, 25, 30, 45, 50];
+
+// const greaterThan20 = numbers.filter(num => num > 20);
+// console.log(greaterThan20); // ✅ [25, 30, 45, 50]
+
+// const numbers = [2, 4, 6, 8];
+
+// const allEven = numbers.every(num => num % 2 === 0);
+// console.log(allEven); // ✅ true (ყველა რიცხვი ლუწია)
+
+// const numbers = [40, 100, 1, 5, 25, 10];
+
+// // ციფრული სორტირება
+// const sortedNumbers = numbers.sort((a, b) => a - b);
+// console.log(sortedNumbers); // ✅ [1, 5, 10, 25, 40, 100]
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const sum = numbers.reduce((acc, num) => acc + num, 0);
+// console.log(sum); // ✅ 15 (1+2+3+4+5)
 
 
+// function range(start, end) {
+//     const result = [];
+//     for (let i = start; i <= end; i++) {
+//       result.push(i);  // ყველა რიცხვი შეიყრება მასივში
+//     }
+//     return result;
+//   }
+  
+//   // მაგალითები:
+//   console.log(range(5, 10)); 
+ 
+// 5
+// function greetPeople(...names) {
+//     names.forEach(name => console.log(`Hello, ${name}!`));
+//   }
+  
+//   greetPeople("Ana", "David", "Giorgi", "Luka"); 
 
