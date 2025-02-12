@@ -638,7 +638,7 @@
 // const numbers = [1, 2, 3, 4, 5];
 
 // const sum = numbers.reduce((acc, num) => acc + num, 0);
-// console.log(sum); // ✅ 15 (1+2+3+4+5)
+// console.log(sum); 
 
 
 // function range(start, end) {
