@@ -1,110 +1,81 @@
 
-// 19  თებერვალის ლექცია
-
-
-// 1.საფინალო პროექტის შეფასების რუბრიკის განხილვა
-// 2.HTML CSS კითხვები
-// 3.landing page
-
-// 4.დავალების განხილვა
-// 4.1.შექმენით ობიექტი, რომელიც ინახავს მაისურის მონაცემებს:
+// 24 თებერვლის ლექცია 
  
-// აღწერა (description)
-// ფერი (color)
-// ზომა (size)
-// ფასი (price)
-// რაოდენობა (quantity)
-// შემდეგ შექმენით ფუნქცია, რომელიც მიიღებს ამ ობიექტს და მომხმარებლის მიერ შეძენილი მაისურების რაოდენობას.
- 
-// თუ მომხმარებელი ითხოვს საწყობში არსებულზე მეტ რაოდენობას, უნდა დაბრუნდეს ტექსტი: "მარაგში საკმარისი რაოდენობა არ არის!"
-// წინააღმდეგ შემთხვევაში, ფუნქციამ უნდა დააბრუნოს მაისურების ჯამური ფასი.
- 
-//  const tshirt = {
-//     description: "მაღალი ხარისხის ბამბის მაისური",
-//     color: "შავი",
-//     size: "L",
-//     price: 25, // ერთეული ფასი
-//     quantity: 10 // საწყობში არსებული რაოდენობა
-// };
+// 1. script.js ფაილის დაკავშირების მეთოდები
 
-// // ფუნქცია,ამოწმებს მარაგს და ანგარიშობს ჯამურ ფასს
-// function shirtBuy(tshirt,quantity){
-//     if(quantity > tshirt.quantity){
-//         return "მარაგში საკმარისი რაოდენობა არ არის!"
-//     }else{
-//         let totalAmount = tshirt.price * quantity
+// 2.გლობალური ობიექტი -- window
 
-//         return `გადასახდელი თანხა არის ${totalAmount}ლ`
+// console.log(window);
 
-//     }
-// }
 
-// let result= shirtBuy(tshirt,12)
-// console.log(result)
+// 3. window -ს მეთოდები ( alert, confirm, propmt)
+// 4. window -ს თვისებები(document, location,console, navigator,history???)
 
-// 4.2.დავალების პირობა:
-//  შექმენით მაღაზიის ობიექტი (გლობალური scope-ში), რომელიც შეიცავს პროდუქტის მონაცემებს (სახელი, ფასი, რაოდენობა საწყობში).
-//  შექმენით ფუნქცია (function scope), რომელიც მიიღებს მომხმარებლის შეკვეთას და დააბრუნებს ჯამურ ღირებულებას.
-//  გამოიყენეთ ბლოკის scope if პირობაში, რათა გამოიანგარიშოთ ფასდაკლება შეკვეთაზე (მაგალითად, 3-ზე მეტი პროდუქტის შეძენისას 10% ფასდაკლება).
-// დაბეჭდეთ საბოლოო თანხა ეკრანზე.
- 
-//  გლობალური scope - პროდუქტის მონაცემები
-// const product = {
-//     name: "მაისური",
-//     price: 20,
-//     stock: 10
-// };
-  //ფუნქციის scope - მარაგის შემოწმება, შეკვეთის გამოთვლა
-//   function order(quantity){
-
-//     let totalPrice = product.price * quantity
-//     if(quantity > 3){
-//         let discount = totalPrice * 0.1
-//         totalPrice = totalPrice - discount
-//         console.log(discount);
-//     }
-//     return ` გადასახდელი თანხა ${totalPrice}`
-//   }
-//   let number1 = Number(prompt("დაწერეთ რაოდენობა"))
-//    let result1= order(number1)
-//    console.log(result1);
- 
-    // ბლოკის scope - ფასდაკლების ლოგიკა
- 
- 
-   
-
-//5. DOM - Document Object Model (WEB API -ის ნაწილი)
+// 5.DOM - Document Object Model (WEB API -ის ნაწილი)
 // API -Application Programming Interface-API-ის მეშვეობით პროგრამული მოდულები ან სისტემები ერთმანეთთან "ლაპარაკობენ" და ინფორმაციის გაცვლას ახდენენ.
-
-let divContainer = document.getElementById('container')
-let divContainerClass =document.getElementsByClassName('container')
-let containerDiv = document.getElementsByTagName('div')
-
-
-let divContainer1 = document.querySelector('.text')
-let divContainer12 = document.querySelectorAll('.text').forEach(function(item){
-    item.textContent = " farewell"
-})
-
-
-
-divContainer.textContent ='Goodbye'
 
 // 5.1.Element Selection Methods - როგორ მივწვდეთ ელემენტებს HTML -ში
 
+// let divContainer = document.getElementById('container')
+// divContainer.textContent ='welcome1'
+// let divContainerClass =document.getElementsByClassName('container')
+// let containerDiv = document.getElementsByTagName('div')
+
+// let divContainer1 = document.querySelector('.text')
+// let divContainer12 = document.querySelectorAll('.text').forEach(function(item){
+//     item.textContent = " farewell"
+// })
+
 // 5.2.Element Manipulation Methods- კლასის , ატრიბუტის , კონტენტის მინიჭება ,გადაწერა,წაშლა,ფერის დამატება
+
+// let text =document.getElementById('text')
+// text.innerHTML='<p>hello text</p>'
+// text.innerText = 'Hello innerText'
+// text.setAttribute('class','extraClass')
+// text.classList.add('secondClass')
+// text.style.color = 'red'
 
 // 5.3. Element Creation and Insertion Methods- ელემენტის შექმნა, ჩასმა
 
-// 5.4 . Event Handling (ივენტების დამუშავება)
-// •	addEventListener(event, function)
+// let ulElement = document.createElement('ul')
 
-// 6. body -ს მიანიჭეთ ფერი , შემოიტანეთ ღილაკი, მასზე დაკლიკებით შეუცვალეთ ფერი, ხოლო შემდეგ გამოიყენეთ toggle .ღილაკზე დაკლიკებით ვამატებთ კლასის სახელს.
-// 7. შექმენით ჰედერი, შემოიტანეთ ლოგო, ნავიგაცია და ბურგერ მენიუს აიქონი,ნოუთბუქის რეზოლუციაზე ბურგერ მენიუ არ უნდა ჩანდეს ,ტაბლეტის რეზოლუციაზე უნდა გამოჩნდეს ბურგერ მენიუს აიქონი და  მასზე დაკლიკებისას კი ნავიგაცია.
+// let liElement = document.createElement('li')
+
+// ulElement.appendChild(liElement)
+// text.appendChild(ulElement)
 
 
 
+// 6 რა არის Event
+// let button = document.getElementById('button')
+// let bodyId = document.getElementById('color')
+// button.addEventListener('click',function(){
+//     bodyId.classList.toggle('active')
+// })
 
-    
-    
+
+// 6.1. Event Handling (ივენთების დამუშავება)('click', 'focus', 'keydown')
+
+// 7. body -ს მიანიჭეთ ფერი , შემოიტანეთ ღილაკი, მასზე დაკლიკებით შეუცვალეთ ფერი, ხოლო შემდეგ გამოიყენეთ toggle .ღილაკზე დაკლიკებით ვამატებთ კლასის სახელს.
+
+// 8. შექმენით ჰედერი, შემოიტანეთ ლოგო, ნავიგაცია და ბურგერ მენიუს აიქონი,ნოუთბუქის რეზოლუციაზე ბურგერ მენიუ არ უნდა ჩანდეს ,ტაბლეტის რეზოლუციაზე უნდა გამოჩნდეს ბურგერ მენიუს აიქონი და  მასზე დაკლიკებისას კი ნავიგაცია.
+
+// ვასელექთებ ბურგერაიქონს,ნავიგაციას
+let navigation = document.getElementById('navigation')
+let burger = document.getElementById('burger')
+// აიქონზე დაკლიკებისას 
+burger.addEventListener('click',function(){
+    if(navigation.classList.contains('activeNavigation')){
+        navigation.classList.remove('activeNavigation')
+        burger.innerHTML =' <i class="fa-solid fa-bars"></i>'
+
+    }else{
+        navigation.classList.add('activeNavigation')
+        burger.innerHTML= '<i class="fas fa-times"></i>'
+
+    }
+})
+// თუ ნავიგაციის კლასი არის  activeNavigation მაშინ მოაშორეთ ეს კლასის სახელი და ბურგერაიქონს innerHTML ით დაუმატეთ fa-bars, წინააღმდეგ შემთხვევაში ნავიგაციას დაუმატეთ კლასის სახელი activeNavigation და burgerIcon innerHtLM fa-times
+
+
+

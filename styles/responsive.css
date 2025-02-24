@@ -1,18 +1,18 @@
 @media(max-width:768px){
     .burger{
         display: block;
-        margin-right: 20px;
+        margin-right: 30px;
     }
     .navigation{
         display: none;
     }
-    .navigation.activeNavigation{
+    .activeNavigation{
         display: block;
-
+        
     }
     .navigation{
         flex-direction: column;
-        background-color: rgb(233, 130, 178);
+        background-color: rgb(194, 139, 165);
         position: absolute;
         left: 50px;
         top: 70px;
