@@ -1,5 +1,10 @@
 
 
+// function show() {
+//     console.log(this);  
+// }
+//   show();
+
 // 24* თებერვლის ლექცია 
  
 // 1. script.js ფაილის დაკავშირების მეთოდები defer ატრიბუტი
@@ -85,53 +90,133 @@
 
 // როგორ განვახორციელოთ AJAX Request ?
 // 3.3 XMLHttpRequest()
-function getUsers(){
-    let request = new XMLHttpRequest()
-    request.addEventListener('load',render)
-    request.addEventListener('error',errorRender)
 
-    request.open('GET','https://reqres.in/api/users?page=1')
-    request.send()
 
-}
+// function getUsers(){
+//     let request = new XMLHttpRequest()
+//     request.addEventListener('load',render)
+//     request.addEventListener('error',errorRender)
 
-function render(){
-    let response=this.response
-    let responseData = JSON.parse(response)
-    console.log(responseData);
-    let container = document.getElementById('container')
-    let ul = document.createElement('ul')
-    responseData.data.forEach(function(item){
-        let li = document.createElement('li')
-        li.textContent =item.email
-        let image = document.createElement('img')
-        image.src = item.avatar
-        ul.appendChild(li)
-        ul.appendChild(image)
-        container.appendChild(ul)
+//     request.open('GET','https://reqres.in/api/users?page=1')
+//     request.send()
+
+// }
+
+// function render(){
+//     let response=this.response
+//     let responseData = JSON.parse(response)
+//     console.log(responseData);
+//     let container = document.getElementById('container')
+//     let ul = document.createElement('ul')
+//     responseData.data.forEach(function(item){
+//         let li = document.createElement('li')
+//         li.textContent =item.email
+//         let image = document.createElement('img')
+//         image.src = item.avatar
+//         ul.appendChild(li)
+//         ul.appendChild(image)
+//         container.appendChild(ul)
+
+//     })
+  
+// }
+
+// function errorRender(){
+//     let container = document.getElementById('container')
+//     let p = document.createElement('p')
+//     p.textContent = 'server error'
+//     container.appendChild(p)
+
+// }
+
+// getUsers()
+
+//  28თებერვალი
+
+
+
+// 1.fetch()
+let currentPage = 1
+let totalPages
+
+
+function getUsers(page){
+    fetch('https://reqres.in/api/users?page='+page,{
+        method:'GET'
+    })
+    .then(function(response){
+        if(response.status !== 200){
+            throw response.status
+        }
+        return response.json()
+    })
+    .then(function(responseData){
+        // let container = document.getElementById('container')
+        let fragment = document.createDocumentFragment()
+        totalPages = responseData.total_pages
+        console.log(responseData);
+           
+            responseData.data.forEach(function(item){
+                let li = document.createElement('li')
+                li.textContent =item.email
+                let image = document.createElement('img')
+                image.src = item.avatar
+                fragment.appendChild(li) 
+                fragment.appendChild(image)  
+            })
+
+            document.getElementById('ul_list').innerHTML = " "
+            document.getElementById('ul_list').appendChild(fragment)
+           
 
     })
+    .catch(function(){
+        let container = document.getElementById('container')
+        let p = document.createElement('p')
+        p.textContent = 'server error 404'
+        container.appendChild(p)
+    })
 
-  
-
-    
-   
-
-    
-}
-
-function errorRender(){
-    let container = document.getElementById('container')
-    let p = document.createElement('p')
-    p.textContent = 'server error'
-    container.appendChild(p)
 
 }
 
-getUsers()
+document.getElementById('loadprev').addEventListener('click',function(){
+    if(currentPage == 1){
+        return
+    }
+
+    currentPage -=1
+    getUsers(currentPage)
+    // currentPage =currentPage -1
+
+})
+
+document.getElementById('loadnext').addEventListener('click', function(){
+    if(currentPage == totalPages){
+        return
+    }
+    currentPage +=1
+    getUsers(currentPage)
+
+})
+
+getUsers(currentPage)
 
 
-// 3.4 fetch()
+
+
+// 2.ფრაგმენტი
+// document.createDocumentFragment()
+// 3.load more button
+
+
+
+// 4.script mode "use strict"
+// 5.accordion
+
+
+
+
 
 
 
