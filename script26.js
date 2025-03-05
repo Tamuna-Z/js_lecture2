@@ -211,19 +211,6 @@ getUsers(currentPage)
 
 
 
-// 4.script mode "use strict"
-// 5.accordion
-
-
-
-
-
-
-
-
-
-
-
 
 
 
