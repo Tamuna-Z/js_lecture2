@@ -13,7 +13,7 @@
     <script src="accordion.js" defer></script>
     <!-- <script src="script2.js" defer ></script> -->
   </head>
-  <body id="color">
+  <body>
     <header>
       <div class="header-wraper">
         <a href="index.html"
@@ -31,6 +31,7 @@
         </div>
       </div>
     </header>
+
     <section class="home" id="home">
       <div>
         <div class="slider" id="slider">
@@ -45,9 +46,7 @@
         <button class="arrow arrow-right" id="arrow-right">
           <i class="fa-solid fa-arrow-right"></i>
         </button>
-        
 
-       
       </div>
     </section>
 
@@ -103,6 +102,41 @@
           </div>
         </div>
       </section>
+
+      <section>
+        <form action="" method="POST" id="registration">
+          <div>
+            <input type="text" name="username" id="username" placeholder="username">
+            <span class="errorText" id="error_username"></span>
+          </div>
+
+          <div>
+            <input type="password" name="password" id="password" placeholder="password">
+            <span class="errorText" id="error_password"></span>
+          </div>
+
+          <div>
+            <input type="password" name="password2" id="password2" placeholder="confirm">
+            <span class="errorText" id="error_password2"></span>
+          </div>
+         
+          <div>
+            <input type="radio" name="age" id="age1">
+            <label for="age1">18-35</label>
+            <input type="radio" name="age" id="age2">
+            <label for="age2">35-50</label>
+            <span class="errorText" id="error_age"></span>
+          </div>
+
+          <div>
+            <input type="checkbox" name="agree" id="checkAgree">
+            <span class="errorText" id="error_agree"></span>
+          </div>
+          <button type="submit">send</button>
+       
+        </form>
+      </section>
     </main>
+
   </body>
 </html>
