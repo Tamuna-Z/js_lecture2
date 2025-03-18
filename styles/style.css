@@ -171,3 +171,35 @@ li{
   color: #f72222;
   font-size: 20px;
 }
+
+/* posts */
+.overlay{
+  position:fixed;
+  top:30px;
+  left:30px;
+  width: 50%;
+  height: 50%;
+  background-color: #a8a4a4;
+  opacity: 70%;
+  color: white;
+  text-align: center;
+  display: none;
+}
+.posts{
+  width: 60%;
+  background-color: #7e3838;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.close{
+  position:absolute;
+  top:30px;
+  right: 30px;
+  color: #f72222;
+  cursor: pointer;
+  font-size: 20px;
+
+}
+.overlay.activePost{
+  display: block;
+}
